@@ -53,6 +53,7 @@ export function AddEventDialog() {
                 return;
             }
             const results = await searchLeads(debouncedSearch);
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             setSearchResults(results as any[]);
         };
         search();

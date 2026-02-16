@@ -53,13 +53,14 @@ export async function POST(req: NextRequest) {
         // but we can't create a lead without fetching.
 
         // We check for direct data first (Zapier style)
-        let leadData: LeadPayload = {
+        const leadData: LeadPayload = {
             email: body.email,
             phone: body.phone,
             first_name: body.first_name,
             last_name: body.last_name,
             full_name: body.full_name,
         };
+
 
         // If not flat, check for nested (Make/Zapier wrapper?)
         // If standard Meta notification:
@@ -143,8 +144,9 @@ export async function POST(req: NextRequest) {
         }
 
         return NextResponse.json({ success: true });
-    } catch (e: any) {
+    } catch (e: unknown) {
+        const message = e instanceof Error ? e.message : 'Unknown error';
         console.error('[Webhook] Unexpected Error:', e);
-        return NextResponse.json({ error: e.message }, { status: 500 });
+        return NextResponse.json({ error: message }, { status: 500 });
     }
 }

@@ -1,7 +1,5 @@
-import { Suspense } from 'react';
-import { startOfMonth, endOfMonth, format } from 'date-fns';
+import { startOfMonth, endOfMonth } from 'date-fns';
 import { fetchMonthEvents } from './actions';
-import { CalendarView } from '@/components/calendar/calendar-view';
 import { AddEventDialog } from '@/components/calendar/add-event-dialog';
 import { Separator } from '@/components/ui/separator';
 

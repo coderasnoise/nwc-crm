@@ -13,11 +13,11 @@ import {
     startOfWeek,
     endOfWeek,
 } from 'date-fns';
-import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { CalendarEvent } from '@/app/(dashboard)/calendar/actions';
-import { EVENT_TYPES, EventType } from '@/lib/constants';
+import { EventType } from '@/lib/constants';
 import Link from 'next/link';
 
 interface CalendarViewProps {

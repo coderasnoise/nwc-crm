@@ -17,7 +17,7 @@ import { ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { CalendarEvent, fetchMonthEvents } from '@/app/(dashboard)/calendar/actions';
-import { EVENT_TYPES, EventType } from '@/lib/constants';
+import { EventType } from '@/lib/constants';
 import Link from 'next/link';
 
 interface CalendarViewProps {
