@@ -15,7 +15,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 interface StageSelectorProps {
     leadId: string;
     currentStage: string | null;
-    allStages: string[];
+    allStages: readonly string[];
 }
 
 export function StageSelector({ leadId, currentStage, allStages }: StageSelectorProps) {
